@@ -9,7 +9,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        plugin = {} // reports & re-run
+        plugin = {}, // reports & re-run
+        features = {},
+        glue = {},
+        dryRun = true,
+        tags = "",
+        publish = true
+
 
 
 
