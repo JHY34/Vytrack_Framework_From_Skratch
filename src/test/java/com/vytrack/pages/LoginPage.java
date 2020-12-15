@@ -1,5 +1,5 @@
 package com.vytrack.pages;
 
 public class LoginPage {
-    // This class is going to have ALL common methods and locators
+    // This class is going to have ALL common methods and locators for the LoginPage
 }
