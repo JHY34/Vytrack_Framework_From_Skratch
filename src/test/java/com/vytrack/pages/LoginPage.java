@@ -36,7 +36,7 @@ public class LoginPage extends BasePage {
 
     public void login (String role) {
         if (role.equalsIgnoreCase("driver")) {
-            String username = ConfigurationReader.getProperty("driver");
+            String username = ConfigurationReader.getProperty("driver.username");
             String password = ConfigurationReader.getProperty("password");
             usernameInput.sendKeys(username);
             passwordInput.sendKeys(password, Keys.ENTER);
