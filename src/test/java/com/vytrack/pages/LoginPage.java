@@ -62,6 +62,10 @@ public class LoginPage extends BasePage {
         Assert.assertTrue(loginErrorAlert.isDisplayed());
     }
 
+    public String getErrorMessage () {
+        return loginErrorAlert.getText().trim();
+    }
+
 
 
 }
