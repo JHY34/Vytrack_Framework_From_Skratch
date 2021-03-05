@@ -64,4 +64,21 @@ public class Login_StepDefinitions {
         loginPage.login(string);
     }
 
+
+
+    @When("user logs in with {string} username and {string} password")
+    public void user_logs_in_with_username_and_password(String string, String string2) {
+        loginPage.login("storemanager85", "InvalidPassword");
+
+    }
+
+
+    @Then("user verifies that {string} message is displayed.")
+    public void user_verifies_that_message_is_displayed(String string) {
+        loginPage.verifyLoginAlert();
+
+    }
+
+
+
 }
