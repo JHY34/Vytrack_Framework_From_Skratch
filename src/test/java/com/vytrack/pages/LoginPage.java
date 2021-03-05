@@ -1,5 +1,6 @@
 package com.vytrack.pages;
 
+import com.vytrack.utils.ConfigurationReader;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +24,14 @@ public class LoginPage extends BasePage {
     public void login (String username, String password) {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password , Keys.ENTER);
+    }
+
+    // Lets overload the login() method without having any credentials
+    public void login() {
+        String username = ConfigurationReader.getProperty("storemanager.username");
+        String password = ConfigurationReader.getProperty("password");
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password, Keys.ENTER);
     }
 
 

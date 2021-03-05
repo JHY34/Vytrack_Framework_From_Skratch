@@ -36,7 +36,9 @@ public class Login_StepDefinitions {
 //        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" , Keys.ENTER);
 
         LoginPage loginPage = new LoginPage();
-        loginPage.login(ConfigurationReader.getProperty("storemanager.username"), ConfigurationReader.getProperty("password"));
+        //loginPage.login(ConfigurationReader.getProperty("storemanager.username"), ConfigurationReader.getProperty("password"));
+        // Lets use the overloaded login() method as seen below
+        loginPage.login();
 
     }
 
