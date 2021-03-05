@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_StepDefinitions {
 
+    LoginPage loginPage = new LoginPage();
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
@@ -35,7 +36,7 @@ public class Login_StepDefinitions {
 //        driver.findElement(By.id("prependedInput")).sendKeys("salesmanager110");
 //        driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123" , Keys.ENTER);
 
-        LoginPage loginPage = new LoginPage();
+
         //loginPage.login(ConfigurationReader.getProperty("storemanager.username"), ConfigurationReader.getProperty("password"));
         // Lets use the overloaded login() method as seen below
         loginPage.login();
@@ -48,10 +49,19 @@ public class Login_StepDefinitions {
 
         String expected = "Dashboard";
         Thread.sleep(3000);
-        String actual = Driver.getDriver().findElement(By.className("oro-subtitle")).getText();
+       // String actual = Driver.getDriver().findElement(By.className("oro-subtitle")).getText();
+
+        String actual = loginPage.getPageSubTitle();
+
         Assert.assertEquals("Title is not verified!",expected, actual );
         Driver.closeDriver();
 
+    }
+
+
+    @When("user logs in as a {string}")
+    public void user_logs_in_as_a(String string) {
+        loginPage.login(string);
     }
 
 }

@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         plugin = {}, // reports & re-run
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
-        dryRun = false,
+        dryRun = true,
         tags = "@login" ,
         publish = true
 

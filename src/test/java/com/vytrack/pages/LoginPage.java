@@ -34,6 +34,15 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password, Keys.ENTER);
     }
 
+    public void login (String role) {
+        if (role.equalsIgnoreCase("driver")) {
+            String username = ConfigurationReader.getProperty("driver");
+            String password = ConfigurationReader.getProperty("password");
+            usernameInput.sendKeys(username);
+            passwordInput.sendKeys(password, Keys.ENTER);
+        }
+    }
+
 
 
 }

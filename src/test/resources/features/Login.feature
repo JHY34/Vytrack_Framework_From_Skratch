@@ -5,3 +5,10 @@ Feature: As a user I should able to login with different user credentials
     Given user is on the login page
     When user puts the correct credentials
     Then user should able to see the landing page
+
+
+  @parametrized_test
+  Scenario: Parametrized login
+    Given user is on the login page
+    When user logs in as a "driver"
+    Then user should able to see the landing page
