@@ -34,6 +34,9 @@ public class BrowserUtilities {
         wait.until(ExpectedConditions.visibilityOf(element));
         element.clear();
         element.sendKeys(text);
+        wait.until(ExpectedConditions.attributeToBe(element, "value", text));
+        // by the above step, whole text will be entered and Selenium WebDriver will not go to the next step before making sure whole text is entered.
+        // As we know, text is stored in the value attribute, so we need to wait until value attribute of the element will obtain expected text.
         System.out.println("Entering text: " + text);
     }
 
