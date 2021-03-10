@@ -54,7 +54,7 @@ public class Login_StepDefinitions {
         String actual = loginPage.getPageSubTitle();
 
         Assert.assertEquals("Title is not verified!",expected, actual );
-        Driver.closeDriver();
+
 
     }
 

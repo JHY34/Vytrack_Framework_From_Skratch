@@ -1,13 +1,14 @@
-@CreateACar
+
 Feature: Create a car
 
-  Background:
+  Background: Login steps
     Given user is on the login page
-    When user puts the correct credentials
-    Then user should able to see the landing page
+    And user puts the correct credentials
+    And user should able to see the landing page
 
-  Scenario:
-    Given user in on the Dashboard page
+  @CreateACar
+  Scenario: Creating a car steps
+    And user in on the Dashboard page
     And user clicks on Fleet and Vehicles
     And user clicks on Create Car button to navigate to Create Car page
     When user fill the necessary boxes

@@ -10,7 +10,7 @@ Feature: As a user I should able to login with different user credentials
   @parametrized_test
   Scenario: Parametrized login
     Given user is on the login page
-    When user logs in as a "driver"
+    When user logs in as a "store manager"
     Then user should able to see the landing page
   # "driver" -> is a parameter.
   # "" allows us to do test parametrization which helps us to use different data with the same test
