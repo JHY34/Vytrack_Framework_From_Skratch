@@ -11,3 +11,6 @@ Feature: As user, I want to be able to create calender events.
         |Title      |Graduation Party!    |
         |Description|Everybody is invited.|
     And user clicks on Save and Close button
+    Then user verifies that new calender event is displayed:
+        |Title      |Graduation Party!    |
+        |Description|Everybody is invited.|
