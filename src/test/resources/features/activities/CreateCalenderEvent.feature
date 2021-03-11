@@ -5,7 +5,7 @@ Feature: As user, I want to be able to create calender events.
     Given user is on the login page
     And user logs in as "store manager"
     And user should able to see the landing page
-    When user navigates to the "Calender Events" page
+    When user navigates to "Activities" and "Calender Events" page
     And user clicks on create calender event button
     And user adds new calender event information
         |Title      |Graduation Party!    |

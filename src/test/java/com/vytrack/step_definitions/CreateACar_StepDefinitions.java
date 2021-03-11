@@ -2,6 +2,7 @@ package com.vytrack.step_definitions;
 
 import com.vytrack.pages.BasePage;
 import com.vytrack.pages.CreateACar;
+import com.vytrack.pages.CreateCalenderEventPage;
 import com.vytrack.pages.LoginPage;
 import com.vytrack.utils.Driver;
 import io.cucumber.java.en.Given;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CreateACar_StepDefinitions {
 
     CreateACar createACar = new CreateACar();
+    CreateCalenderEventPage createCalenderEventPage = new CreateCalenderEventPage();
 
 
     @Given("user in on the Dashboard page")
@@ -44,6 +46,7 @@ public class CreateACar_StepDefinitions {
 
     @When("user clicks on Save and Close button")
     public void user_clicks_on_save_and_close_button() {
+        createCalenderEventPage.clickOnCreateCalenderEventBtn();
 
     }
 
