@@ -3,6 +3,7 @@ package com.vytrack.step_definitions;
 import com.vytrack.pages.CreateCalenderEventPage;
 import com.vytrack.pages.LoginPage;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.Map;
@@ -36,6 +37,15 @@ public class CreateCalendarEvent_StepDefinitions {
         createCalenderEventPage.clickOnCreateCalenderEventBtn();
 
     }
+
+
+    @Then("user verifies that new calender event is displayed:")
+    public void user_verifies_that_new_calender_event_is_displayed(Map <String, String> dataTable) {
+        // add verification steps here
+        // Assert.assertEquals (expectedTitle, actualTitle);
+        // Assert.assertEquals (expectedDescription, actualDescription);
+    }
+
 
 
 
